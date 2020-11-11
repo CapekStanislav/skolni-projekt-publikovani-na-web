@@ -1,9 +1,10 @@
  ### system files ####
- .idea/
+/.idea/
 
 ### api files ###
- api/keys
- api/node_modules
+/api/keys
+/api/node_modules
 
 ### client files ###
-client/node_modules
+/client/node_modules
+

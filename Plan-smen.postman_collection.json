@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "e364bf54-21e2-4c8f-b089-2e67d1eaf41e",
+		"name": "Plan-smen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"testUser\",\n\t\"name\": \"New User\",\n\t\"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIxMTF9.87tbz9Gzk4PZccXzjdc1M5iuIvKfMMo8FCyj9pLY2A8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"testUser\",\n\t\"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get name logged user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get existing plan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/plans/2020/4",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"plans",
+						"2020",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get new plan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/plans/2020/4/new",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"plans",
+						"2020",
+						"4",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new plan to DB",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shifts\": [\r\n        \"D\",\r\n        \"-\",\r\n        \"D\",\r\n        \"-\",\r\n        \"N\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"PD\",\r\n        \"ZV\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\"\r\n    ],\r\n    \"fund\": 165,\r\n    \"onPlan\": 0,\r\n    \"diff\": 0,\r\n    \"owner\": \"5ea1cd1f628a1c206cd692b2\",\r\n    \"year\": 2020,\r\n    \"month\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/plans/2020/4",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"plans",
+						"2020",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Compute hours",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shifts\": [\r\n        \"D\",\r\n        \"-\",\r\n        \"D\",\r\n        \"-\",\r\n        \"N\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"PD\",\r\n        \"ZV\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\"\r\n    ],\r\n    \"fund\": 165,\r\n    \"onPlan\": 0,\r\n    \"diff\": 0,\r\n    \"owner\": \"5ea1cd1f628a1c206cd692b2\",\r\n    \"year\": 2020,\r\n    \"month\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/plans/2020/4/comput",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"plans",
+						"2020",
+						"4",
+						"comput"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing plan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shifts\": [\r\n        \"D\",\r\n        \"-\",\r\n        \"D\",\r\n        \"-\",\r\n        \"N\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"D\",\r\n        \"-\",\r\n        \"-\",\r\n        \"D\",\r\n        \"D\",\r\n        \"PD\",\r\n        \"ZV\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\",\r\n        \"-\"\r\n    ],\r\n    \"fund\": 165,\r\n    \"onPlan\": 156,\r\n    \"diff\": 9,\r\n    \"owner\": \"5ea1cd1f628a1c206cd692b2\",\r\n    \"year\": 2020,\r\n    \"month\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/plans/2020/4",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"plans",
+						"2020",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjIzNDZ9.tp3NiLi75jcnbln7vZk26rFe_FwBVzI7amWYE_DSqkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"type": "text",
+						"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTk5Yzc2M2EwNWMzNDQ4ODA2ZGJiMzIiLCJpYXQiOjE1ODcyNDE2NjV9.EjcyvvREut9WYXm2Xoxl7P4_HVGsbKRFZnIZ37KNOvU"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/users/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWExY2QxZjYyOGExYzIwNmNkNjkyYjIiLCJpYXQiOjE1ODc2NjY2MjN9.T9gexDXu6s7wNt547CXDE1ExKKtB4Jtzigz4cckzffY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing plan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
