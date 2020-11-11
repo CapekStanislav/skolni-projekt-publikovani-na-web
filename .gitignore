@@ -2,7 +2,7 @@
 /.idea/
 
 ### api files ###
-/api/keys
+/api/keys/mongo.json
 /api/node_modules
 
 ### client files ###
